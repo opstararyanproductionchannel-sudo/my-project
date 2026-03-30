@@ -553,4 +553,4 @@
                 header.style.background = 'rgba(102, 126, 234, 0.95)';
                 header.style.backdropFilter = 'blur(10px)';
             } else {
-                header.style.background = 'linear-gradient(135deg, #667eea
+                header.style.background = 'linear-gradient(135deg, #667eea                                                                                    this is code of my site can you make it professional for my hotel and replace code and dont change my hotel name its name is hotel 0771 its address changurabhata kushalpur chowk beside dhelabai chatrwas and also add there is 4 delxue room and ac room price is 1500 without ac is 1000
