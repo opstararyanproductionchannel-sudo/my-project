@@ -92,7 +92,7 @@
         /* Hero Section */
         .hero {
             background: linear-gradient(rgba(44,62,80,0.85), rgba(52,152,219,0.85)), 
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700"><defs><radialGradient id="bg" cx="50%" cy="50%"><stop offset="0%" stop-color="%232c3e50"/><stop offset="70%" stop-color="%233498db"/><stop offset="100%" stop-color="%231a252f"/></radialGradient></defs><rect width="1200" height="700" fill="url(%23bg)"/><circle fill="%23f39c12" opacity="0.2" cx="200" cy="150" r="250"/><circle fill="%23e74c" opacity="0.15" cx="1000" cy="500" r="200"/><circle fill="%23349 8db" opacity="0.1" cx="600" cy="300" r="150"/></svg>');
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700"><defs><radialGradient id="bg" cx="50%" cy="50%"><stop offset="0%" stop-color="%232c3e50"/><stop offset="70%" stop-color="%233498db"/><stop offset="100%" stop-color="%231a252f"/></radialGradient></defs><rect width="1200" height="700" fill="url(%23bg)"/><circle fill="%23f39c12" opacity="0.2" cx="200" cy="150" r="250"/><circle fill="%23e74c" opacity="0.15" cx="1000" cy="500" r="200"/><circle fill="%233498db" opacity="0.1" cx="600" cy="300" r="150"/></svg>');
             background-size: cover;
             background-position: center;
             height: 100vh;
@@ -215,6 +215,37 @@
             color: #2c3e50;
             margin-bottom: 1.5rem;
             font-size: 1.5rem;
+        }
+
+        .phone-numbers {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .phone-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background: linear-gradient(45deg, #f39c12, #e67e22);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .phone-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(243,156,18,0.4);
+        }
+
+        .phone-item.owner {
+            background: linear-gradient(45deg, #3498db, #2980b9);
         }
 
         /* Rooms */
@@ -450,6 +481,10 @@
             h2 {
                 font-size: 2.2rem;
             }
+
+            .phone-numbers {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -497,9 +532,18 @@
                     <h3>Visit Us</h3>
                     <p><strong>Changurabhata, Kushalpur Chowk</strong><br>
                     Beside Dhelabai Chatrwas<br>
-                    Raipur, Chhattisgarh<br>
-                    <i class="fas fa-phone" style="color: #3498db; margin: 0.5rem 0;"></i> 
-                    <strong>+91 94790 2907</strong></p>
+                    Raipur, Chhattisgarh</p>
+                    
+                    <div class="phone-numbers">
+                        <a href="tel:9479025907" class="phone-item owner">
+                            <i class="fas fa-user-tie"></i>
+                            Owner: 94790 25907
+                        </a>
+                        <a href="tel:07713151881" class="phone-item">
+                            <i class="fas fa-phone"></i>
+                            Landline: 0771-3151881
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -519,25 +563,4 @@
                         <p>Luxurious AC room with modern amenities. We have <strong>4 Deluxe AC Rooms</strong> available.</p>
                         <ul class="room-features">
                             <li><i class="fas fa-check"></i> Air Conditioning</li>
-                            <li><i class="fas fa-tv"></i> LED TV</li>
-                            <li><i class="fas fa-bed"></i> Comfortable Bedding</li>
-                            <li><i class="fas fa-wifi"></i> Free WiFi</li>
-                        </ul>
-                        <div class="room-price">₹1500/night</div>
-                        <a href="#contact" class="cta-button" style="font-size: 1rem; padding: 0.9rem 2rem;">Book Now</a>
-                    </div>
-                </div>
-                <div class="room-card">
-                    <div class="room-image">
-                        <i class="fas fa-bed"></i>
-                    </div>
-                    <div class="room-info">
-                        <h3>Standard Non-AC Room</h3>
-                        <p>Clean and comfortable non-AC room perfect for budget travelers.</p>
-                        <ul class="room-features">
-                            <li><i class="fas fa-fan"></i> Ceiling Fan</li>
-                            <li><i class="fas fa-tv"></i> LED TV</li>
-                            <li><i class="fas fa-bed"></i> Comfortable Bedding</li>
-                            <li><i class="fas fa-wifi"></i> Free WiFi</li>
-                        </ul>
-                        <div class="
+                            <li><i
