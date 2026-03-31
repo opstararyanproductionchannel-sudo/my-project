@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel 0771 | Premium Accommodation | Changurabhata, Kushalpur Chowk</title>
-    <meta name="description" content="Hotel 0771 - 4 Deluxe AC Rooms (₹1500) & Non-AC Rooms (₹1000). Located at Changurabhata, Kushalpur Chowk beside Dhelabai Chatrwas, Raipur. Book your stay now!">
-    <meta name="keywords" content="Hotel 0771, Changurabhata, Kushalpur Chowk, Raipur hotel, AC rooms, budget hotel">
+    <meta name="description" content="Hotel 0771 - 10 Super Deluxe AC Rooms (₹1500). Located at Changurabhata, Kushalpur Chowk beside Dhelabai Chatrwas, Raipur. Book your stay now!">
+    <meta name="keywords" content="Hotel 0771, Changurabhata, Kushalpur Chowk, Raipur hotel, AC rooms, super deluxe rooms, budget hotel">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -153,6 +153,7 @@
             color: var(--white);
             position: relative;
             overflow: hidden;
+            padding-top: 80px;
         }
 
         .hero::before {
@@ -162,8 +163,12 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="%23ffffff" stop-opacity="0.1"/><stop offset="100%" stop-color="%23ffffff" stop-opacity="0"/></radialGradient></defs><circle cx="20" cy="20" r="10" fill="url(%23a)"><animate attributeName="r" values="10;15;10" dur="3s" repeatCount="indefinite"/></circle><circle cx="80" cy="80" r="8" fill="url(%23a)"><animate attributeName="r" values="8;12;8" dur="4s" repeatCount="indefinite"/></circle></svg>');
+            background-image: 
+                radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(255,255,255,0.05) 0%, transparent 50%);
             animation: float 20s ease-in-out infinite;
+            pointer-events: none;
         }
 
         @keyframes float {
@@ -394,4 +399,168 @@
            ROOMS SECTION
         =========================================== */
         .rooms-grid {
-            display:
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        .room-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid var(--gray-100);
+            position: relative;
+        }
+
+        .room-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .room-image {
+            height: 220px;
+            background: linear-gradient(135deg, var(--gray-200), var(--gray-100));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: var(--gray-400);
+        }
+
+        .room-content {
+            padding: 2.5rem 2rem 2rem;
+        }
+
+        .room-type {
+            font-size: 0.875rem;
+            color: var(--accent);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+        }
+
+        .room-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 1rem;
+        }
+
+        .room-price {
+            font-size: 2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+        }
+
+        .room-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .room-features li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--gray-600);
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+        }
+
+        .room-features i {
+            color: var(--primary);
+            width: 18px;
+        }
+
+        .room-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            width: 100%;
+            padding: 1rem 1.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .room-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(30, 64, 175, 0.4);
+        }
+
+        /* ===========================================
+           CONTACT SECTION
+        =========================================== */
+        .contact-section {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--white);
+            text-align: center;
+        }
+
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-highlight {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .contact-phone {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        /* ===========================================
+           FOOTER
+        =========================================== */
+        .footer {
+            background: var(--gray-900);
+            color: var(--gray-300);
+            text-align: center;
+            padding: 3rem 0 2rem;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer-address {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        /* ===========================================
+           RESPONSIVE
+        =========================================== */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .mobile-toggle {
+                display: block;
+            }
+            
