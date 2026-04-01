@@ -59,7 +59,7 @@
         }
 
         .nav-container {
-            max-width: 1280px;
+            max-width: 90px;
             margin: 0 auto;
             padding: 0 2rem;
             display: flex;
@@ -71,7 +71,7 @@
         .logo {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
             font-size: 1.875rem;
             font-weight: 800;
             color: var(--primary);
